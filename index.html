@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#take-signal -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGNAL — The Agency Growth Diagnostic by Team Uncommon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./SIGNAL — The Agency Growth Diagnostic by Team Uncommon_files/css2" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #111111;
+    --ink-mid: #444444;
+    --ink-soft: #777777;
+    --red: #F0C040;
+    --red-dark: #D4A82E;
+    --gold: #F0C040;
+    --off-white: #F7F6F0;
+    --white: #FFFFFF;
+    --border: rgba(17,17,17,0.12);
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--white); color: var(--ink); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+  .page-wrapper { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+  /* NAV */
+  nav { padding: 1.25rem 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); z-index: 100; }
+  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--sans); font-weight: 500; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a { font-size: 14px; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { background: var(--ink) !important; color: var(--white) !important; padding: 0.5rem 1.25rem !important; border-radius: 3px !important; font-size: 13px !important; font-weight: 500 !important; }
+  .nav-cta:hover { background: var(--red) !important; color: var(--ink) !important; }
+
+  /* HERO */
+  .hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--red); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem); line-height: 1.1; color: var(--ink); max-width: 820px; margin-bottom: 1.75rem; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; color: var(--ink); border-bottom: 3px solid var(--red); padding-bottom: 2px; }
+  .hero-sub { font-size: 1.125rem; color: var(--ink-mid); max-width: 580px; line-height: 1.65; margin-bottom: 2.5rem; }
+  .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--red); color: var(--ink); padding: 0.875rem 2rem; border-radius: 3px; font-size: 15px; font-weight: 500; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: var(--red-dark); color: var(--ink); transform: translateY(-1px); }
+  .btn-ghost { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--ink-mid); font-size: 14px; text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s; }
+  .btn-ghost:hover { color: var(--ink); }
+  .hero-stat-row { display: flex; align-items: center; gap: 2.5rem; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
+  .hero-stat { display: flex; flex-direction: column; gap: 0.2rem; }
+  .hero-stat-num { font-family: var(--serif); font-size: 1.9rem; color: var(--ink); line-height: 1; }
+  .hero-stat-label { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; max-width: 140px; line-height: 1.4; }
+  .stat-divider { width: 1px; height: 40px; background: var(--border); }
+
+  /* SECTIONS */
+  section { padding: 5rem 0; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+  .section-headline { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; color: var(--ink); margin-bottom: 1.25rem; max-width: 700px; }
+  .section-headline em { font-style: italic; color: var(--ink); border-bottom: 2px solid var(--red); padding-bottom: 1px; }
+  .section-body { font-size: 1.0625rem; color: var(--ink-mid); max-width: 600px; line-height: 1.7; }
+  .accentbar { width: 100%; border-bottom: 1px solid var(--border); }
+
+  /* TENSION */
+  .tension { background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .prose p { font-size: 1.0625rem; color: var(--ink-mid); line-height: 1.75; margin-bottom: 1.25rem; }
+  .prose p strong { color: var(--ink); font-weight: 500; }
+  .prose a { color: var(--red); text-decoration: none; border-bottom: 1px solid rgba(232,71,63,0.3); }
+  .prose a:hover { border-color: var(--red); }
+  .tension-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+  .tension-list li { padding: 1.125rem 1.25rem; background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--red); border-radius: 2px; font-size: 0.9375rem; color: var(--ink-mid); line-height: 1.55; }
+  .tension-list li strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 0.25rem; font-size: 0.9rem; }
+
+  /* DOMAINS */
+  .signal-intro { border-bottom: 1px solid var(--border); }
+  .domains-grid { display: flex; flex-direction: column; gap: 0.625rem; }
+  .domain-item { display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; border: 1px solid var(--border); border-radius: 2px; transition: border-color 0.2s; }
+  .domain-item:hover { border-color: var(--red); }
+  .domain-left { display: flex; align-items: center; gap: 0.75rem; }
+  .domain-num { font-size: 11px; font-weight: 500; color: var(--red); min-width: 20px; }
+  .domain-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+  .domain-weight { font-size: 12px; font-weight: 500; color: var(--white); background: var(--ink); padding: 0.2rem 0.5rem; border-radius: 2px; }
+  .domain-weight.high { background: var(--red); color: var(--ink); }
+  .domain-footnote { font-size: 12px; color: var(--ink-soft); padding: 0.5rem 0.25rem; line-height: 1.5; margin-top: 0.25rem; }
+
+  /* HOW */
+  .how { background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+  .step-num { font-family: var(--serif); font-size: 2.5rem; color: rgba(17,17,17,0.15); line-height: 1; margin-bottom: 0.875rem; }
+  .step-title { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; }
+  .step-body { font-size: 13.5px; color: var(--ink-soft); line-height: 1.65; }
+
+  /* PATHS */
+  .paths { border-bottom: 1px solid var(--border); }
+  .paths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+  .path-card { padding: 2rem; border: 1px solid var(--border); border-radius: 4px; transition: border-color 0.2s; }
+  .path-card:hover { border-color: rgba(17,17,17,0.3); }
+  .path-card.featured { border-color: var(--ink); border-top: 3px solid var(--red); }
+  .path-badge { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.625rem; border-radius: 2px; margin-bottom: 1rem; }
+  .path-badge.full { background: var(--ink); color: var(--white); }
+  .path-badge.quick { background: var(--off-white); color: var(--ink-mid); border: 1px solid var(--border); }
+  .path-title { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); margin-bottom: 0.375rem; }
+  .path-time { font-size: 13px; color: var(--ink-soft); font-weight: 500; margin-bottom: 1.25rem; }
+  .path-desc { font-size: 14px; color: var(--ink-mid); line-height: 1.65; margin-bottom: 1.5rem; }
+  .path-features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.75rem; }
+  .path-features li { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 13.5px; color: var(--ink-mid); }
+  .path-features li::before { content: '✓'; color: var(--ink); font-weight: 700; font-size: 13px; min-width: 16px; }
+  .path-cta { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 14px; font-weight: 500; color: var(--ink-mid); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s; }
+  .path-cta:hover { color: var(--ink); }
+  .path-cta.primary { background: var(--red); color: var(--ink); padding: 0.7rem 1.5rem; border-radius: 3px; border: none; font-weight: 600; transition: background 0.2s; }
+  .path-cta.primary:hover { background: var(--red-dark); }
+
+  /* OUTPUT */
+  .output { background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .output-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
+  .output-card { background: var(--white); border: 1px solid var(--border); padding: 1.5rem; border-radius: 3px; }
+  .output-num { font-family: var(--serif); font-size: 1.5rem; color: rgba(17,17,17,0.15); line-height: 1; margin-bottom: 0.75rem; }
+  .output-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; }
+  .output-desc { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+
+  /* CRED */
+  .cred { border-bottom: 1px solid var(--border); }
+  .cred-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .cred-stat { background: var(--off-white); border: 1px solid var(--border); padding: 1.375rem 1.25rem; border-radius: 3px; }
+  .cred-stat-num { font-family: var(--serif); font-size: 2rem; color: var(--ink); line-height: 1; margin-bottom: 0.3rem; }
+  .cred-stat-label { font-size: 12.5px; color: var(--ink-soft); line-height: 1.4; }
+  .cred-quote { grid-column: 1 / -1; background: var(--ink); padding: 1.5rem; border-radius: 3px; }
+  .cred-quote-text { font-family: var(--serif); font-size: 1.125rem; font-style: italic; line-height: 1.55; color: var(--white); margin-bottom: 0.75rem; }
+  .cred-quote-attr { font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+
+  /* FAQ */
+  .faq { border-bottom: 1px solid var(--border); }
+  .faq-list { max-width: 720px; margin-top: 2.5rem; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 1.375rem 0; }
+  .faq-q { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 0.625rem; }
+  .faq-a { font-size: 14px; color: var(--ink-mid); line-height: 1.65; }
+
+  /* FINAL CTA */
+  .final-cta { background: var(--ink); padding: 5.5rem 0; text-align: center; }
+  .final-cta .section-label { color: rgba(255,255,255,0.35); }
+  .final-cta h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); color: var(--white); line-height: 1.15; max-width: 680px; margin: 0 auto 1.25rem; }
+  .final-cta h2 em { font-style: italic; color: var(--gold); }
+  .final-cta p { font-size: 1rem; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto 2.25rem; line-height: 1.65; }
+  .final-cta-actions { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+  .btn-primary-light { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--red); color: var(--ink); padding: 0.9rem 2rem; border-radius: 3px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .btn-primary-light:hover { background: var(--red-dark); transform: translateY(-1px); }
+  .final-ghost { font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1px; transition: color 0.2s; }
+  .final-ghost:hover { color: rgba(255,255,255,0.75); }
+
+  /* FOOTER */
+  footer { padding: 2rem 0; border-top: 1px solid var(--border); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-note { font-size: 12px; color: var(--ink-soft); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 12px; color: var(--ink-soft); text-decoration: none; }
+  .footer-links a:hover { color: var(--ink); }
+
+  @media (max-width: 760px) {
+    .two-col, .paths-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+    .output-grid { grid-template-columns: 1fr; }
+    .cred-stats { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://uncommon.team/" class="nav-logo">Team <span>Uncommon</span></a>
+    <div class="nav-links">
+      <a href="https://uncommon.team/about">About</a>
+      <a href="https://uncommon.team/team">Our Team</a>
+      <a href="https://uncommon.team/work">Work</a>
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#take-signal" class="nav-cta">Take SIGNAL</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="page-wrapper">
+    <div class="hero-eyebrow">SIGNAL — The Agency Growth Diagnostic by Team Uncommon</div>
+    <h1>Most agencies have the talent. But they're still struggling because they don't have <em>a growth strategy.</em></h1>
+    <p class="hero-sub">SIGNAL is a data-driven diagnostic that tells you exactly where your agency stands — and what it's costing you to stay there. Built by growth leaders who've run it at the highest levels of the industry.</p>
+    <div class="hero-actions">
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#take-signal" class="btn-primary">Take SIGNAL — it's free &nbsp;→</a>
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#how-it-works" class="btn-ghost">See how it works ↓</a>
+    </div>
+    <div class="hero-stat-row">
+      <div class="hero-stat">
+        <span class="hero-stat-num">250+</span>
+        <span class="hero-stat-label">New business wins generated for clients</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">8</span>
+        <span class="hero-stat-label">Chief Growth Officers on our team</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">160+</span>
+        <span class="hero-stat-label">Combined years leading agency growth</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">$M+</span>
+        <span class="hero-stat-label">In converted revenue across our portfolio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE REAL PROBLEM -->
+<section class="tension">
+  <div class="page-wrapper">
+    <p class="section-label">The real problem</p>
+    <h2 class="section-headline">You already know something is off. <em>You just can't see where.</em></h2>
+    <div class="two-col">
+      <div class="prose">
+        <p>Most independent agency CEOs are exceptional at the work. They've built strong teams, delivered real results for clients, and earned a reputation worth protecting.</p>
+        <p>But growth — <strong>consistent, scalable, strategic growth</strong> — is a different discipline. And most agencies are running it without the positioning, the systems, or the infrastructure that actually make it work.</p>
+        <p>The result isn't failure. It's a slow drag. Pitches that should be wins. Referrals that never materialize into a program. A positioning that describes what you do without communicating why a client should choose you over anyone else.</p>
+        <p>SIGNAL exists to show you where the drag is — and how much it's costing you.</p>
+      </div>
+      <ul class="tension-list">
+        <li>
+          <strong>Positioning that describes, not differentiates</strong>
+          Most agency websites sell services. The agencies that grow sell solutions to specific problems — and prove it with outcomes.
+        </li>
+        <li>
+          <strong>Growth that depends on who you know</strong>
+          If your pipeline lives in the founder's network, you don't have a growth strategy. You have a fragile dependency.
+        </li>
+        <li>
+          <strong>Win rates that signal a deeper issue</strong>
+          A sub-30% close rate isn't a pitch problem. It's usually a positioning problem — and no amount of better decks will fix it.
+        </li>
+        <li>
+          <strong>Organic growth left on the table</strong>
+          The most efficient revenue you'll ever generate is already inside your client relationships. Most agencies never systematically go after it.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS SIGNAL -->
+<section class="signal-intro">
+  <div class="page-wrapper">
+    <p class="section-label">What SIGNAL does</p>
+    <h2 class="section-headline">A diagnostic built specifically for how agencies grow — or don't.</h2>
+    <div class="two-col">
+      <div class="prose">
+        <p>SIGNAL evaluates your agency across six weighted domains — using both your self-reported inputs and an AI analysis of your website and LinkedIn presence. That combination matters: it's the difference between what you believe about your agency and what the market actually sees.</p>
+        <p>The output is a composite growth readiness score, benchmarked against independent agencies of comparable size. You'll know not just where you rank — but specifically what's holding you back and what to fix first.</p>
+        <p><strong>Positioning is weighted at 30% of your total score.</strong> That's intentional. In our work with dozens of independent agencies, weak or generic positioning is the single most common root cause of underperformance across every other growth lever.</p>
+      </div>
+      <div>
+        <div class="domains-grid">
+          <div class="domain-item">
+            <div class="domain-left">
+              <span class="domain-num">01</span>
+              <span class="domain-name">Positioning &amp; Differentiation</span>
+            </div>
+            <span class="domain-weight high">30%</span>
+          </div>
+          <div class="domain-item">
+            <div class="domain-left">
+              <span class="domain-num">02</span>
+              <span class="domain-name">Growth Strategy &amp; Infrastructure</span>
+            </div>
+            <span class="domain-weight">14%</span>
+          </div>
+          <div class="domain-item">
+            <div class="domain-left">
+              <span class="domain-num">03</span>
+              <span class="domain-name">New Business Performance</span>
+            </div>
+            <span class="domain-weight">14%</span>
+          </div>
+          <div class="domain-item">
+            <div class="domain-left">
+              <span class="domain-num">04</span>
+              <span class="domain-name">Financial Health &amp; Revenue Trajectory</span>
+            </div>
+            <span class="domain-weight">14%</span>
+          </div>
+          <div class="domain-item">
+            <div class="domain-left">
+              <span class="domain-num">05</span>
+              <span class="domain-name">External Presence &amp; Thought Leadership</span>
+            </div>
+            <span class="domain-weight">14%</span>
+          </div>
+          <div class="domain-item">
+            <div class="domain-left">
+              <span class="domain-num">06</span>
+              <span class="domain-name">Team &amp; Organizational Health</span>
+            </div>
+            <span class="domain-weight">14%</span>
+          </div>
+        </div>
+        <p class="domain-footnote">SIGNAL also cross-references your self-reported answers against what your website and LinkedIn actually show — and flags the gaps where your perception diverges from your market reality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how-it-works">
+  <div class="page-wrapper">
+    <p class="section-label">The process</p>
+    <h2 class="section-headline">From first question to growth roadmap.</h2>
+    <div class="steps-grid">
+      <div>
+        <div class="step-num">01</div>
+        <div class="step-title">Choose your path</div>
+        <div class="step-body">Start with the Quick Read (12 min) for a fast headline view, or commit to the Full Diagnostic (30 min) for complete depth. Your answers are always saved — you can go deeper anytime.</div>
+      </div>
+      <div>
+        <div class="step-num">02</div>
+        <div class="step-title">Answer honestly</div>
+        <div class="step-body">Questions span six domains. The more direct you are, the more useful your results. There are no right answers — only honest ones. The diagnostic rewards clarity, not performance.</div>
+      </div>
+      <div>
+        <div class="step-num">03</div>
+        <div class="step-title">We read the signals</div>
+        <div class="step-body">While you complete the assessment, our AI analyzes your website and LinkedIn against your answers. If what you say and what the market sees don't align, we'll flag it.</div>
+      </div>
+      <div>
+        <div class="step-num">04</div>
+        <div class="step-title">Get your score &amp; roadmap</div>
+        <div class="step-body">Your personalized report is ready immediately. A composite score, domain-by-domain breakdown, your top three growth priorities, and a path to your custom growth roadmap.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO PATHS -->
+<section class="paths" id="take-signal">
+  <div class="page-wrapper">
+    <p class="section-label">Choose your path</p>
+    <h2 class="section-headline">Two ways in. Same six domains. One honest score.</h2>
+    <div class="paths-grid">
+      <div class="path-card featured">
+        <span class="path-badge full">Full Diagnostic</span>
+        <div class="path-title">The complete picture</div>
+        <div class="path-time">32 questions — approximately 30 minutes</div>
+        <p class="path-desc">Every domain at full depth. The more you put in, the more specific your roadmap. Built for leaders who are ready to make decisions based on real data, not instinct.</p>
+        <ul class="path-features">
+          <li>Full domain breakdown with scored analysis</li>
+          <li>AI cross-reference of your website &amp; LinkedIn</li>
+          <li>Inconsistency detection — what you say vs. what you show</li>
+          <li>Ranked top 3 growth priorities with specific direction</li>
+          <li>Custom growth roadmap session with our team</li>
+        </ul>
+        <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#" class="path-cta primary">Start Full Diagnostic →</a>
+      </div>
+      <div class="path-card">
+        <span class="path-badge quick">Quick Read</span>
+        <div class="path-title">The headline view</div>
+        <div class="path-time">12 questions — approximately 12 minutes</div>
+        <p class="path-desc">Two high-signal questions per domain. Enough to see where growth is stalling. A strong starting point — and if the results make you want to go deeper, your answers carry forward.</p>
+        <ul class="path-features">
+          <li>Composite score across all six domains</li>
+          <li>Top growth priorities identified</li>
+          <li>AI website &amp; LinkedIn snapshot included</li>
+          <li>Upgrade to Full Diagnostic — no re-entry required</li>
+        </ul>
+        <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#" class="path-cta">Start Quick Read →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR REPORT -->
+<section class="output">
+  <div class="page-wrapper">
+    <p class="section-label">Your report</p>
+    <h2 class="section-headline">Not a score. A starting point.</h2>
+    <p class="section-body">Every SIGNAL report is personalized — generated from your specific inputs, not a template. Here's what's waiting on the other side.</p>
+    <div class="output-grid">
+      <div class="output-card">
+        <div class="output-num">01</div>
+        <div class="output-title">Your composite score &amp; tier</div>
+        <div class="output-desc">A single number benchmarked against independent agencies of your size. Five tiers — from Below Standard to Nailing It — with context for what your score actually means.</div>
+      </div>
+      <div class="output-card">
+        <div class="output-num">02</div>
+        <div class="output-title">Domain breakdown</div>
+        <div class="output-desc">A scored interpretation for each of the six domains. Where you're stronger than most. Where the gaps are. Written directly — no padding, no false encouragement.</div>
+      </div>
+      <div class="output-card">
+        <div class="output-num">03</div>
+        <div class="output-title">Top 3 growth priorities</div>
+        <div class="output-desc">Ranked by impact. Each one with a what, a why, and a directional recommendation. The most actionable section of your report.</div>
+      </div>
+      <div class="output-card">
+        <div class="output-num">04</div>
+        <div class="output-title">Inconsistency flags</div>
+        <div class="output-desc">Where your self-assessment diverges from what your website and LinkedIn actually show. Framed as observations — but honest enough to be useful.</div>
+      </div>
+      <div class="output-card">
+        <div class="output-num">05</div>
+        <div class="output-title">What's working</div>
+        <div class="output-desc">Genuine strengths the data surfaces. Not flattery — assets to build your next growth phase from. We only call it a strength if the data supports it.</div>
+      </div>
+      <div class="output-card">
+        <div class="output-num">06</div>
+        <div class="output-title">Your custom growth roadmap</div>
+        <div class="output-desc">The report is the teaser. The roadmap is built in a 30-minute session with a Team Uncommon strategist — specific to your score, your priorities, and your agency's situation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO BUILT THIS -->
+<section class="cred">
+  <div class="page-wrapper">
+    <p class="section-label">Who built this</p>
+    <h2 class="section-headline">We've led growth at the highest levels of the industry. <em>This is what we learned.</em></h2>
+    <div class="two-col">
+      <div class="prose">
+        <p>Team Uncommon is a group of former Chief Growth Officers and Chief Marketing Officers — from holding companies like Omnicom, IPG, WPP, and Publicis, and from independent agencies that had to earn every win without a network's infrastructure behind them.</p>
+        <p>We built SIGNAL because we kept seeing the same patterns: <strong>talented agencies with generic positioning, reactive growth strategies, and no real system for turning their expertise into consistent, scalable revenue.</strong></p>
+        <p>For every agency we've partnered with, we've built a unique and ownable positioning that gave them a credible reason for clients to engage — and a foundation to build all growth and marketing from. The diagnostic is built on those same frameworks.</p>
+        <p>The difference here is you get to see where you stand before committing to anything. <a href="https://www.uncommon.team/team" target="_blank">Meet our full team →</a></p>
+      </div>
+      <div class="cred-stats">
+        <div class="cred-stat">
+          <div class="cred-stat-num">8</div>
+          <div class="cred-stat-label">Chief Growth Officers, each with 15+ years of leadership</div>
+        </div>
+        <div class="cred-stat">
+          <div class="cred-stat-num">250+</div>
+          <div class="cred-stat-label">New business wins from $100K to $2.5M+</div>
+        </div>
+        <div class="cred-stat">
+          <div class="cred-stat-num">5 yrs+</div>
+          <div class="cred-stat-label">Leading growth exclusively for independent agencies</div>
+        </div>
+        <div class="cred-stat">
+          <div class="cred-stat-num">100%</div>
+          <div class="cred-stat-label">Of partner agencies received a unique, ownable positioning</div>
+        </div>
+        <div class="cred-quote">
+          <div class="cred-quote-text">"Every agency we've worked with had more growth potential than they were capturing. The gap was almost never talent. It was always strategy."</div>
+          <div class="cred-quote-attr">— Team Uncommon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="page-wrapper">
+    <p class="section-label">Common questions</p>
+    <h2 class="section-headline">What you might be wondering.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is SIGNAL really free?</div>
+        <div class="faq-a">Yes. The diagnostic and your personalized report are completely free. The only ask is 12–30 minutes of your honest attention. If your score opens a conversation about working together, that's a good outcome — but there's no obligation attached to taking it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Who is this built for?</div>
+        <div class="faq-a">CEOs, founding partners, and senior growth leaders at independent agencies. This is built for decision-makers who have both the authority and the appetite to act on what they find. Whether you're running a 5-person studio or a 200-person independent shop, the diagnostic is relevant.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens after I get my score?</div>
+        <div class="faq-a">Your report is delivered as a hosted page you can revisit and share with your leadership team. It ends with an invitation to book a 30-minute call with a Team Uncommon strategist to walk through a custom growth roadmap based on your specific results. That conversation is where the real work starts.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">If I take the Quick Read, can I go back and complete the Full Diagnostic later?</div>
+        <div class="faq-a">Yes. Your Quick Read answers are saved. If you decide to go deeper — right after finishing or days later — you won't re-enter anything. You'll pick up exactly where you left off, with only the additional questions remaining.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is my data used?</div>
+        <div class="faq-a">Your responses are used to generate your personalized report. If you request a growth roadmap session, your results are shared with our team to prepare for that conversation. We don't share individual agency data with third parties.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="page-wrapper">
+    <p class="section-label">The only question left</p>
+    <h2>Do you actually know where your agency <em>stands?</em></h2>
+    <p>Most agency leaders think they do. SIGNAL shows you the distance between what you believe and what the data says. Twelve minutes for the headline. Thirty for the full picture. Free either way.</p>
+    <div class="final-cta-actions">
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#take-signal" class="btn-primary-light">Take SIGNAL — it's free &nbsp;→</a>
+      <a href="https://www.uncommon.team/team" target="_blank" class="final-ghost">Meet the team first →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-note">© 2025 Team Uncommon &nbsp;·&nbsp; uncommon.team &nbsp;·&nbsp; SIGNAL is a proprietary diagnostic tool.</span>
+    <div class="footer-links">
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#">Privacy</a>
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#">Terms</a>
+      <a href="file:///Users/matthewanderson/Downloads/signal_landing_page_1.html#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
